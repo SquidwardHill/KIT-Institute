@@ -24,12 +24,25 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    // CSS file in the project
+    '@/assets/css/main.css',
+    // SCSS file in the project
+    '@/assets/css/main.scss'
+  ],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    { 
+      src: '~plugins/vue-carousel', 
+      ssr: false 
+    },
+    { 
+      src: '~plugins/global-components' 
+    },
+  ],
 
   /*
    ** Nuxt.js modules
@@ -68,7 +81,9 @@ export default {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,  options: {
+            fix: true,
+          }
         })
       }
     }

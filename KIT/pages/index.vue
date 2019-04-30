@@ -1,67 +1,104 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        KIT
-      </h1>
-      <h2 class="subtitle">
-        KIT Institute
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-          >GitHub</a
-        >
+  <div class="wrapper">
+    <Hero
+      v-for="heroSlide in hero"
+      :key="heroSlide.id"
+      :background-image="heroSlide.backgroundImage"
+      :title="heroSlide.title"
+      :subhead="heroSlide.subhead"
+      :hero-text="heroSlide.heroText"
+      :link="heroSlide.link"
+    >
+    </Hero>
+    <section class="featured">
+      <div class="container">
+        <h3 class="light">FEATURED</h3>
       </div>
-    </div>
-  </section>
+      <div class="columns">
+        <Featured
+          v-for="feature in featured"
+          :key="feature.id"
+          :img-src-small="feature.imgSrcSmall"
+          :title="feature.title"
+          :description="feature.description"
+        >
+        </Featured>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+// import { Carousel, Slide } from 'vue-carousel'
+import Featured from '@/components/Featured'
+import Hero from '@/components/Hero'
 export default {
   components: {
-    Logo
+    Featured,
+    Hero
+    // Carousel,
+    // Slide
+  },
+  data() {
+    return {
+      featured: [
+        {
+          id: '1',
+          title: 'Featured 1',
+          description: 'Featured 1 description lalal',
+          imgSrcSmall: '/images/featured-1.jpg'
+        },
+        {
+          id: '2',
+          title: 'Featured 2',
+          description: 'Featured 2 description lalal',
+          imgSrcSmall: '/images/featured-2.jpg'
+        },
+        {
+          id: '3',
+          title: 'Featured 3',
+          description: 'Featured 3 description lalal',
+          imgSrcSmall: '/images/featured-3.jpg'
+        },
+        {
+          id: '4',
+          title: 'Featured 4',
+          description: 'Featured 4 description lalal',
+          imgSrcSmall: '/images/featured-4.jpg'
+        },
+        {
+          id: '5',
+          title: 'Featured 5',
+          description: 'Featured 5 description lalal',
+          imgSrcSmall: '/images/featured-5.jpg'
+        }
+      ],
+      hero: [
+        {
+          id: '1',
+          title: 'Welcome to KIT',
+          subhead: 'Watch the Season Finale Now',
+          heroText:
+            'Every horror sequel has its own set of rules. Can this new generation of teens survive long enough to figureout theirs?',
+          link: '#',
+          backgroundImage: '/images/KIT-home-hero-1.jpg'
+        }
+      ]
+    }
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang="scss">
+.wrapper {
+  background: rgba(29, 29, 29, 0.97);
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.light {
+  color: #fff;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@media (min-width: 1280px) {
+  .featured {
+    margin-top: -90px;
+  }
 }
 </style>
