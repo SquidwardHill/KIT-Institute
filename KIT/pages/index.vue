@@ -10,19 +10,111 @@
       :link="heroSlide.link"
     >
     </Hero>
+
+    <!-- Featured -->
     <section class="featured">
-      <div class="container">
+      <div class="container-fluid has-padding-left has-padding-right">
         <h3 class="light">FEATURED</h3>
       </div>
-      <div class="columns">
+      <div class="columns has-padding-left has-padding-right">
         <Featured
           v-for="feature in featured"
           :key="feature.id"
           :img-src-small="feature.imgSrcSmall"
           :title="feature.title"
+          :canonical="feature.canonical"
           :description="feature.description"
         >
         </Featured>
+      </div>
+    </section>
+    <!-- Events -->
+    <section class="events">
+      <div class="container-fluid has-padding-left has-padding-right">
+        <h3 class="light">EVENTS</h3>
+      </div>
+      <div class="columns has-padding-left has-padding-right">
+        <Event
+          v-for="event in events"
+          :key="event.id"
+          :img-src-small="event.imgSrcSmall"
+          :title="event.title"
+          :canonical="event.canonical"
+          :description="event.description"
+        >
+        </Event>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="events">
+      <div class="container-fluid has-padding-left has-padding-right">
+        <h3 class="light">EVENTS</h3>
+      </div>
+      <div class="columns has-padding-left has-padding-right">
+        <Event
+          v-for="event in events"
+          :key="event.id"
+          :img-src-small="event.imgSrcSmall"
+          :title="event.title"
+          :canonical="event.canonical"
+          :description="event.description"
+        >
+        </Event>
+      </div>
+    </section>
+
+    <!-- Scholarship -->
+    <section class="events">
+      <div class="container-fluid has-padding-left has-padding-right">
+        <h3 class="light">SCHOLARSHIP</h3>
+      </div>
+      <div class="columns has-padding-left has-padding-right">
+        <Event
+          v-for="event in events"
+          :key="event.id"
+          :img-src-small="event.imgSrcSmall"
+          :title="event.title"
+          :canonical="event.canonical"
+          :description="event.description"
+        >
+        </Event>
+      </div>
+    </section>
+
+    <!-- STUDENT LIFE -->
+    <section class="events">
+      <div class="container-fluid has-padding-left has-padding-right">
+        <h3 class="light">STUDENT LIFE</h3>
+      </div>
+      <div class="columns has-padding-left has-padding-right">
+        <Event
+          v-for="event in events"
+          :key="event.id"
+          :img-src-small="event.imgSrcSmall"
+          :title="event.title"
+          :canonical="event.canonical"
+          :description="event.description"
+        >
+        </Event>
+      </div>
+    </section>
+
+    <!-- INTERNSHIP -->
+    <section class="events">
+      <div class="container-fluid has-padding-left has-padding-right">
+        <h3 class="light">INTERNSHIP</h3>
+      </div>
+      <div class="columns has-padding-left has-padding-right">
+        <Event
+          v-for="event in events"
+          :key="event.id"
+          :img-src-small="event.imgSrcSmall"
+          :title="event.title"
+          :canonical="event.canonical"
+          :description="event.description"
+        >
+        </Event>
       </div>
     </section>
   </div>
@@ -31,11 +123,13 @@
 <script>
 // import { Carousel, Slide } from 'vue-carousel'
 import Featured from '@/components/Featured'
+import Event from '@/components/Event'
 import Hero from '@/components/Hero'
 export default {
   components: {
     Featured,
-    Hero
+    Hero,
+    Event
     // Carousel,
     // Slide
   },
@@ -44,33 +138,75 @@ export default {
       featured: [
         {
           id: '1',
+          canonical: 'featured-1',
           title: 'Featured 1',
-          description: 'Featured 1 description lalal',
+          description: 'Featured 1 description',
           imgSrcSmall: '/images/featured-1.jpg'
         },
         {
           id: '2',
+          canonical: 'featured-2',
           title: 'Featured 2',
-          description: 'Featured 2 description lalal',
+          description: 'Featured 2 description',
           imgSrcSmall: '/images/featured-2.jpg'
         },
         {
           id: '3',
+          canonical: 'featured-3',
           title: 'Featured 3',
-          description: 'Featured 3 description lalal',
+          description: 'Featured 3 description',
           imgSrcSmall: '/images/featured-3.jpg'
         },
         {
           id: '4',
+          canonical: 'featured-4',
           title: 'Featured 4',
-          description: 'Featured 4 description lalal',
+          description: 'Featured 4 description',
           imgSrcSmall: '/images/featured-4.jpg'
         },
         {
           id: '5',
+          canonical: 'featured-5',
           title: 'Featured 5',
-          description: 'Featured 5 description lalal',
+          description: 'Featured 5 description',
           imgSrcSmall: '/images/featured-5.jpg'
+        }
+      ],
+      events: [
+        {
+          id: '1',
+          canonical: 'event-1',
+          title: 'event 1',
+          description: 'event 1 description',
+          imgSrcSmall: '/images/event-1.jpg'
+        },
+        {
+          id: '2',
+          canonical: 'event-2',
+          title: 'event 2',
+          description: 'event 2 description',
+          imgSrcSmall: '/images/event-2.jpg'
+        },
+        {
+          id: '3',
+          canonical: 'event-3',
+          title: 'event 3',
+          description: 'event 3 description',
+          imgSrcSmall: '/images/event-3.jpg'
+        },
+        {
+          id: '4',
+          canonical: 'event-4',
+          title: 'event 4',
+          description: 'event 4 description',
+          imgSrcSmall: '/images/event-4.jpg'
+        },
+        {
+          id: '5',
+          canonical: 'event-5',
+          title: 'event 5',
+          description: 'event 5 description',
+          imgSrcSmall: '/images/event-5.jpg'
         }
       ],
       hero: [

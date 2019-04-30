@@ -1,11 +1,11 @@
 <template>
   <div class="column is-one-fifth">
-    <nuxt-link :to="'/featured/' + canonical">
+    <nuxt-link :to="'/event/' + canonical">
       <article
-        class="featured--item"
+        class="event--item"
         :style="{ backgroundImage: 'url(' + imgSrcSmall + ')' }"
       >
-        <div class="featured--item-content">
+        <div class="event--item-content">
           <h1>{{ title }}</h1>
           <p>{{ description }}</p>
         </div>
@@ -42,20 +42,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.featured {
+.event {
   display: flex;
   flex-direction: row;
   position: relative;
-  @media (min-width: 1280px) {
-    margin-top: -90px;
-  }
+
   &--item {
+    min-height: 12vw;
     padding: 5em 1em 1em 1em;
     background-size: cover;
     background-repeat: no-repeat;
     margin: 1em 0.5em;
     position: relative;
-    min-height: 24vw;
     display: flex;
     align-items: flex-end;
     position: relative;

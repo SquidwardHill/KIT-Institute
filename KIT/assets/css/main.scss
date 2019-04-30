@@ -35,3 +35,30 @@ h2 {
 .links {
   padding-top: 15px;
 }
+
+.is-flex-column {
+  // flex-direction: column;
+  // -webkit-flex-direction: column;
+  flex-flow: column wrap;
+  
+}
+
+.footer .is-flex-column a{
+  display: block;
+}
+
+/*padding*/
+.has-padding{
+  &-top {
+  padding-top: 5vw;
+  }
+  &-bottom {
+    padding-bottom: 5vw;
+    }
+  &-left {
+    padding-left: 5vw;
+  }
+  &-right {
+    padding-left: 5vw;
+  }
+}

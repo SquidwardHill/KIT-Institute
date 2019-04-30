@@ -1,7 +1,9 @@
 <template>
   <div class="nav">
     <div class="logo">
-      <img src="/images/kit-logo.png" />
+      <nuxt-link to="/">
+        <img src="/images/kit-logo.png" />
+      </nuxt-link>
     </div>
     <div class="nav-links">
       <nuxt-link to="/">
