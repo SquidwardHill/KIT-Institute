@@ -33,7 +33,7 @@
 
 <style lang="scss" scoped>
 .footer {
-  background: #022f40;
+  background: #141414;
   color: #999999;
 }
 a {

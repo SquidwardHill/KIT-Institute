@@ -23,12 +23,37 @@
   </div>
 </template>
 
+//
+<script>
+// export default {
+//   mounted() {
+//     window.addEventListener('scroll', this.updateScroll)
+//   },
+//   methods: {
+//     updateScroll() {
+//       this.scrollPosition = window.scrollY
+//     }
+//   },
+//   destroy() {
+//     window.removeEventListener('scroll', this.updateScroll)
+//   }
+// }
+//
+</script>
 <style lang="scss" scoped>
 .nav {
-  background: #000;
   display: flex;
   align-items: center;
   padding: 1em 5em;
+  transition: 0.2s ease;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background: #000;
+}
+.hasScrolled {
+  background: #000;
+  transition: 0.2s ease;
 }
 .logo {
   padding-right: 5em;

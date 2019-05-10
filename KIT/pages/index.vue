@@ -8,6 +8,7 @@
       :subhead="heroSlide.subhead"
       :hero-text="heroSlide.heroText"
       :link="heroSlide.link"
+      :class="{ isTop: scrollPosition < 100, isTop: scrollPosition > 100 }"
     >
     </Hero>
 
@@ -141,35 +142,35 @@ export default {
           canonical: 'featured-1',
           title: 'Featured 1',
           description: 'Featured 1 description',
-          imgSrcSmall: '/images/featured-1.jpg'
+          imgSrcSmall: '/images/PLACEHOLDERS/placeholder-tall-1.jpg'
         },
         {
           id: '2',
           canonical: 'featured-2',
           title: 'Featured 2',
           description: 'Featured 2 description',
-          imgSrcSmall: '/images/featured-2.jpg'
+          imgSrcSmall: '/images/PLACEHOLDERS/placeholder-tall-2.jpg'
         },
         {
           id: '3',
           canonical: 'featured-3',
           title: 'Featured 3',
           description: 'Featured 3 description',
-          imgSrcSmall: '/images/featured-3.jpg'
+          imgSrcSmall: '/images/PLACEHOLDERS/placeholder-tall-3.jpg'
         },
         {
           id: '4',
           canonical: 'featured-4',
           title: 'Featured 4',
           description: 'Featured 4 description',
-          imgSrcSmall: '/images/featured-4.jpg'
+          imgSrcSmall: '/images/PLACEHOLDERS/placeholder-tall-4.jpg'
         },
         {
           id: '5',
           canonical: 'featured-5',
           title: 'Featured 5',
           description: 'Featured 5 description',
-          imgSrcSmall: '/images/featured-5.jpg'
+          imgSrcSmall: '/images/PLACEHOLDERS/placeholder-tall-5.jpg'
         }
       ],
       events: [
@@ -178,35 +179,35 @@ export default {
           canonical: 'event-1',
           title: 'event 1',
           description: 'event 1 description',
-          imgSrcSmall: '/images/event-1.jpg'
+          imgSrcSmall: '/images/PLACEHOLDERS/placeholder-1.jpg'
         },
         {
           id: '2',
           canonical: 'event-2',
           title: 'event 2',
           description: 'event 2 description',
-          imgSrcSmall: '/images/event-2.jpg'
+          imgSrcSmall: '/images/PLACEHOLDERS/placeholder-2.jpg'
         },
         {
           id: '3',
           canonical: 'event-3',
           title: 'event 3',
           description: 'event 3 description',
-          imgSrcSmall: '/images/event-3.jpg'
+          imgSrcSmall: '/images/PLACEHOLDERS/placeholder-3.jpg'
         },
         {
           id: '4',
           canonical: 'event-4',
           title: 'event 4',
           description: 'event 4 description',
-          imgSrcSmall: '/images/event-4.jpg'
+          imgSrcSmall: '/images/PLACEHOLDERS/placeholder-4.jpg'
         },
         {
           id: '5',
           canonical: 'event-5',
           title: 'event 5',
           description: 'event 5 description',
-          imgSrcSmall: '/images/event-5.jpg'
+          imgSrcSmall: '/images/PLACEHOLDERS/placeholder-5.jpg'
         }
       ],
       hero: [
@@ -217,7 +218,7 @@ export default {
           heroText:
             'Every horror sequel has its own set of rules. Can this new generation of teens survive long enough to figureout theirs?',
           link: '#',
-          backgroundImage: '/images/KIT-home-hero-1.jpg'
+          backgroundImage: '/images/PLACEHOLDERS/placeholder-hero-home.jpg'
         }
       ]
     }
@@ -227,7 +228,8 @@ export default {
 
 <style lang="scss">
 .wrapper {
-  background: rgba(29, 29, 29, 0.97);
+  // background: rgba(29, 29, 29, 0.97);
+  background: #141414;
 }
 .light {
   color: #fff;

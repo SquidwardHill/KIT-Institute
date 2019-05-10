@@ -6,7 +6,7 @@
         :style="{ backgroundImage: 'url(' + imgSrcSmall + ')' }"
       >
         <div class="featured--item-content">
-          <h1>{{ title }}</h1>
+          <h4>{{ title }}</h4>
           <p>{{ description }}</p>
         </div>
       </article>
@@ -43,9 +43,10 @@ export default {
 
 <style lang="scss" scoped>
 .featured {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: row;
-  position: relative;
   @media (min-width: 1280px) {
     margin-top: -90px;
   }

@@ -6,7 +6,7 @@
         :style="{ backgroundImage: 'url(' + imgSrcSmall + ')' }"
       >
         <div class="event--item-content">
-          <h1>{{ title }}</h1>
+          <h4>{{ title }}</h4>
           <p>{{ description }}</p>
         </div>
       </article>

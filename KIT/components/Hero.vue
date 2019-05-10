@@ -6,14 +6,14 @@
     }"
   >
     <div class="columns">
-      <div class="column is-one-third">
+      <div class="column is-two-fifths">
         <h1>{{ title }}</h1>
         <h2>
           <em>{{ subhead }}</em>
         </h2>
-        <p>
+        <h4>
           {{ heroText }}
-        </p>
+        </h4>
         <div class="button-wrap">
           <a class="button is-primary" :href="{ link }">Apply Now</a>
           <a class="button is-ghost" :href="{ link }"><span>+</span> My List</a>
@@ -56,19 +56,14 @@ export default {
 
 <style lang="scss" scoped>
 $color--red: #ed2517;
-h1 {
-  font-size: calc(12px + 1.5vw);
-  font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-bottom: 1em;
-}
-h2 {
-  font-size: calc(12px + 1vw);
-}
+h1,
+h2,
 p {
-  font-size: calc(12px + 0.4vw);
-  margin: 2em 0;
+  margin-bottom: 0.5em;
+  line-height: 1.2em;
+}
+h4 {
+  line-height: 1.2em;
 }
 .is-primary {
   background-color: $color--red;
@@ -83,13 +78,38 @@ p {
   }
 }
 .hero {
+  z-index: 0;
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 85vh;
   color: #fff;
-  padding: 5em 4em;
-  @media (min-width: 1280px) {
-    padding: 5em 4em 10em 5em;
+  padding: 10%;
+  &:before {
+    content: '';
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    background: linear-gradient(
+      69.77deg,
+      rgba(0, 0, 0, 0.43) 10.99%,
+      rgba(0, 0, 0, 0) 87.18%
+    );
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
+    z-index: 0;
   }
+  @media (min-width: 1280px) {
+    // padding: 5em 4em 10em 5em;
+  }
+  .columns {
+    position: relative;
+    z-index: 1;
+  }
+}
+.button-wrap {
+  margin-top: 3em;
 }
 .button {
   border-radius: 0;
